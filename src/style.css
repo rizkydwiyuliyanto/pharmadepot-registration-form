@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --fs-normal: 1.4rem;
+  --fs-small: 1rem;
+  --fs-medium: 1.8rem;
+  --fs-large: 2rem;
+}
+@media screen and (max-width: 1439px) {
+  :root {
+    --fs-normal: 1rem;
+    --fs-small: 0.7rem;
+    --fs-medium: 1.4rem;
+    --fs-large: 1.6rem;
+  }
+}
+
+.fs-normal {
+  font-size: var(--fs-normal);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image {
+  position: fixed;
+  left: 0;
+  width: 550px;
+  height: 100vh;
+  background-color: #00C1B6;
+}
+@media screen and (max-width: 1439px) {
+  .image {
+    width: 35%;
+  }
+}
+
+.section {
+  width: calc(100% - 550px);
+  margin-left: auto;
+}
+@media screen and (max-width: 1439px) {
+  .section {
+    width: 65%;
+  }
+}
+
+input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.button-register-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+select option:hover {
+  background-color: blue;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #00C1B6;
+}
+input[type=radio]:checked {
+  display: grid;
+  place-items: center;
+}
+input[type=radio]:checked::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #00C1B6;
+}
+
+.value {
+  width: 30px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid #FEFEFE;
+  box-shadow: 2px 2px 3px 2px rgb(206, 206, 206);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 20px;
+  outline: none;
+  border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #00C1B6;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #FEFEFE;
+  box-shadow: 2px 2px 3px 2px rgb(206, 206, 206);
+  position: relative;
+}
+input[type=range]::-webkit-slider-thumb::after {
+  content: "test";
+  position: absolute;
+  left: 50%;
+  z-index: 5;
+  width: 22px;
+  height: 22px;
+  background-color: rebeccapurple;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: #00C1B6;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid #FEFEFE;
+  box-shadow: 2px 2px 3px 2px rgb(206, 206, 206);
+  position: relative;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  color: white;
+  resize: none;
+}
+
+.input {
+  background-color: #00C1B6;
+}
+.input input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.loading {
+  width: calc(100% - 550px);
+  background-color: white;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  height: 100vh;
+}
+@media screen and (max-width: 1439px) {
+  .loading {
+    width: 65%;
+  }
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fdd;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}/*# sourceMappingURL=style.css.map */
